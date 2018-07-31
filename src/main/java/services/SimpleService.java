@@ -16,6 +16,7 @@ public class SimpleService {
 	}
 	
 	@GET
+	@Path("/mypath")
 	public Response showMessage() {
 		String msg = "Welcome to deployed version";
 		return Response.status(200).entity(msg).build();
