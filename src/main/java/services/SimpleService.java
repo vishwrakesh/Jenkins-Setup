@@ -14,5 +14,11 @@ public class SimpleService {
 		String responseStr = "Received message: "+msg;
 		return Response.status(200).entity(responseStr).build();
 	}
+	
+	@GET
+	public Response showMessage() {
+		String msg = "Welcome to deployed version";
+		return Response.status(200).entity(msg).build();
+	}
 
 }
