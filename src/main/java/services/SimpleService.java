@@ -1,8 +1,18 @@
 package services;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
+
+@Path("/home")
 public class SimpleService {
-	public void display() {
-		System.out.println("This is Simple service change in display text ******.");
+
+	@GET
+	@Path("{message}")
+	public Response publishMessage(@PathParam("message") String msg) {
+		String responseStr = "Received message: "+msg;
+		return Response.status(200).entity(responseStr).build();
 	}
 
 }
