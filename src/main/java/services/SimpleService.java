@@ -9,7 +9,7 @@ public class SimpleService {
 
 	@GET
 	public Response showMessage() {
-		String msg = "Triggered by Rakesh V";
+		String msg = "Triggered by Kumar Rakesh";
 		return Response.status(200).entity(msg).build();
 	}
 
