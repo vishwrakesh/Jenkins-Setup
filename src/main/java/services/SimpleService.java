@@ -9,7 +9,7 @@ public class SimpleService {
 
 	@GET
 	public Response showMessage() {
-		String msg = "Welcome to auto deploy";
+		String msg = "Triggered by Rakesh kumar.";
 		return Response.status(200).entity(msg).build();
 	}
 
